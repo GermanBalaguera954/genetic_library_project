@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: genetic-library
+Version: 0.1
+Summary: Una librería para implementar algoritmos genéticos
+Home-page: https://github.com/GermanBalaguera954/genetic_library_project
+Author: German Balaguera Yenifer Garcia
+Author-email: gbalaguera@ucundinamarca.edu.co
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Genetic Library
+
+Esta es una librerÃ­a de Python para implementar **algoritmos genÃ©ticos**.
+
+## InstalaciÃ³n
+
+```bash
+pip install genetic_library
+
+# Ejemplo de cÃ³mo usar esta librerÃ­a
+
+from genetic_library.genetic_algorithm import GeneticAlgorithm
+import random
+
+# Definir una funciÃ³n de aptitud
+def fitness_function(chromosome):
+    return sum(chromosome)
+
+# Crear una poblaciÃ³n inicial
+initial_population = [[random.randint(0, 1) for _ in range(6)] for _ in range(10)]
+
+# Configurar el algoritmo genÃ©tico
+ga = GeneticAlgorithm(
+    population=initial_population,
+    fitness_function=fitness_function,
+    crossover_type="two_point",
+    mutation_type="swap",
+    selection_type="roulette",
+    elitism=True
+)
+
+# Ejecutar el algoritmo
+ga.run(10)

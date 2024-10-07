@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+genetic_library/__init__.py
+genetic_library/genetic_algorithm.py
+genetic_library/utils.py
+genetic_library.egg-info/PKG-INFO
+genetic_library.egg-info/SOURCES.txt
+genetic_library.egg-info/dependency_links.txt
+genetic_library.egg-info/top_level.txt
